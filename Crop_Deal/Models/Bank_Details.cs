@@ -9,7 +9,7 @@ namespace Crop_Deal.Models
         [Key]
         public int Bank_DetailId { get; set; }
 
-        //[ForeignKey("User")]
+        [ForeignKey("User")]
         public int User_Id { get; set; }
 
 
@@ -23,17 +23,15 @@ namespace Crop_Deal.Models
 
         [Required(ErrorMessage = "Please enter the IFSC code")]
         public string? Bank_IFSC { get; set; }
-       
 
 
 
 
 
 
-
-
-
-        //[JsonIgnore]
-        //public User? User { get; set; }
+        // Used to fetch the details from User table of the database
+        // JsonIgnore is used to get only the required properties for the swagger from the user table and ignore all other attributes.
+        [JsonIgnore]
+        public User? User { get; set; }
     }
 }

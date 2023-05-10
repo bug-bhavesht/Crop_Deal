@@ -15,14 +15,6 @@ namespace Crop_Deal.Models
 
 
         [Required]
-        public string? Crop_Id { get; set;}
-
-
-        [Required]
-        public string? User_Id { get; set;}
-
-
-        [Required]
         public string? Crop_Name { get; set; }
 
 
@@ -46,12 +38,5 @@ namespace Crop_Deal.Models
         public string? Crop_Location { get; set; }
 
 
-
-
-
-
-
-        /*  [JsonIgnore]*/
-        /*  public virtual Crop Crop { get; set; }*/
     }
 }

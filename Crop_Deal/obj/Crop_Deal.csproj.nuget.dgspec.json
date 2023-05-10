@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\athar\\source\\repos\\Crop_Deal\\Crop_Deal\\Crop_Deal.csproj": {}
+    "C:\\Users\\athar\\OneDrive\\Desktop\\Crop Deal\\Crop_Deal\\Crop_Deal\\Crop_Deal.csproj": {}
   },
   "projects": {
-    "C:\\Users\\athar\\source\\repos\\Crop_Deal\\Crop_Deal\\Crop_Deal.csproj": {
+    "C:\\Users\\athar\\OneDrive\\Desktop\\Crop Deal\\Crop_Deal\\Crop_Deal\\Crop_Deal.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\athar\\source\\repos\\Crop_Deal\\Crop_Deal\\Crop_Deal.csproj",
+        "projectUniqueName": "C:\\Users\\athar\\OneDrive\\Desktop\\Crop Deal\\Crop_Deal\\Crop_Deal\\Crop_Deal.csproj",
         "projectName": "Crop_Deal",
-        "projectPath": "C:\\Users\\athar\\source\\repos\\Crop_Deal\\Crop_Deal\\Crop_Deal.csproj",
+        "projectPath": "C:\\Users\\athar\\OneDrive\\Desktop\\Crop Deal\\Crop_Deal\\Crop_Deal\\Crop_Deal.csproj",
         "packagesPath": "C:\\Users\\athar\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\athar\\source\\repos\\Crop_Deal\\Crop_Deal\\obj\\",
+        "outputPath": "C:\\Users\\athar\\OneDrive\\Desktop\\Crop Deal\\Crop_Deal\\Crop_Deal\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\athar\\AppData\\Roaming\\NuGet\\NuGet.Config",

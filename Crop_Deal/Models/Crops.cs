@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Text.Json.Serialization;
 
 namespace Crop_Deal.Models
@@ -17,7 +18,7 @@ namespace Crop_Deal.Models
         public int Crop_Id { get; set; }
 
 
-        //[ForeignKey("User")]
+        [ForeignKey("User")]
         public int User_Id { get; set; }
 
         [Required]
@@ -26,16 +27,13 @@ namespace Crop_Deal.Models
         [Required]
         public string? Crop_img { get; set; }
 
+        [ForeignKey("Crop_Details")]
+        public int CropDetail_Id { get; set; }
 
-        /*  [JsonIgnore]*/
-        /*       [ForeignKey("Crop_Detail")]
-        */
-        //public int Crop_detailid { get; set; }
-        //[JsonIgnore]
-        //public Crop_detail Crop_Detail { get; set; }
+        [JsonIgnore]
+        public User? User { get; set; }
 
-        
-        //[JsonIgnore]
-        //public User User { get; set; }
+        [JsonIgnore]
+        public Crop_Details? Crop_Details { get; set; }
     }
 }

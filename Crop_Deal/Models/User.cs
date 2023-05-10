@@ -8,6 +8,7 @@ namespace Crop_Deal.Models
         {
 
         }
+
         [Key]
         public int User_id { get; set; }
 
@@ -22,6 +23,7 @@ namespace Crop_Deal.Models
         public string? User_Contact { get; set; }
 
 
+        [Required]
         public string? User_Role { get; set; } = string.Empty;
 
 
@@ -47,7 +49,7 @@ namespace Crop_Deal.Models
 
 
 
-        //public List<Crop> Crops { get; set; }
-        //public List<Invoice> Invoices { get; set; }
+        public List<Crops>? Crops { get; set; }
+        public List<Invoice>? Invoices { get; set; }
     }
 }
