@@ -27,13 +27,6 @@ namespace Crop_Deal.Service
             return await context.Users.ToListAsync();
         }
 
-        public async Task<User> UserDelete(User user)
-        {
-            context.Users.Remove(user);
-            await context.SaveChangesAsync();
-            return user;
-        }
-
         public async Task<User> UserInsert(User user)
         {
             context.Users.Add(user);
@@ -41,9 +34,27 @@ namespace Crop_Deal.Service
             return user;
         }
 
-        public async Task<User> UserUpdate(User user)
+        public async Task<User?> UserUpdate(int id, User user)
         {
+
+            //var userid = await context.Users.FindAsync(id);
+            //if (userid == null)
+            //{
+            //    return null;
+            //}
             context.Entry(user).State = EntityState.Modified;
+            await context.SaveChangesAsync();
+            return user;
+        }
+
+        public async Task<User?> UserDelete(int id)
+        {
+            var user = await context.Users.FindAsync(id);
+            if (user == null)
+            {
+                return null;
+            }
+            context.Users.Remove(user);
             await context.SaveChangesAsync();
             return user;
         }

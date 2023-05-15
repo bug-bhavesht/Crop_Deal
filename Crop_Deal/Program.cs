@@ -1,9 +1,13 @@
 using Crop_Deal.Context;
+using Crop_Deal.Infrastructure;
+using Crop_Deal.Service;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Services.AddScoped<IUser, UserRepository>();
+builder.Services.AddScoped<IBank_Details, Bank_DetailsRepository>();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

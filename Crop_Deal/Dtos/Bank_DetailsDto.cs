@@ -1,17 +1,12 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Text.Json.Serialization;
 
-namespace Crop_Deal.Models
+namespace Crop_Deal.Dtos
 {
-    public class Bank_Details
+    public class Bank_DetailsDto
     {
-        [Key]
-        public int Bank_DetailId { get; set; }
-
         [ForeignKey("User")]
         public int User_id { get; set; }
-
 
         [Required(ErrorMessage = "Please enter your Bank Name")]
         public string? Bank_Name { get; set; }
@@ -23,15 +18,5 @@ namespace Crop_Deal.Models
 
         [Required(ErrorMessage = "Please enter the IFSC code")]
         public string? Bank_IFSC { get; set; }
-
-
-
-
-
-
-        // Used to fetch the details from User table of the database
-        // JsonIgnore is used to get only the required properties for the swagger from the user table and ignore all other attributes.
-        [JsonIgnore]
-        public User? User { get; set; }
     }
 }

@@ -9,8 +9,8 @@ namespace Crop_Deal.Infrastructure
         
         Task<User> UserInsert(User user);
 
-        Task<User> UserUpdate(User user);
+        Task<User?> UserUpdate(int id, User user);
 
-        Task<User> UserDelete(User user);
+        Task<User?> UserDelete(int id);
     }
 }
