@@ -8,6 +8,9 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddScoped<IUser, UserRepository>();
 builder.Services.AddScoped<IBank_Details, Bank_DetailsRepository>();
+builder.Services.AddScoped<ICrops, CropRepository>();   
+builder.Services.AddScoped<ICrop_Detail, Crop_DetailRepository>();
+builder.Services.AddScoped<IInvoice, InvoiceRepository>();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

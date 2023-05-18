@@ -24,6 +24,9 @@ namespace Crop_Deal.Models
         public int Crop_Quantity { get; set; }
 
         [Required]
+        public double Crop_Price { get; set;}
+
+        [Required]
         public string? Payment_Mode { get; set; } = string.Empty;
 
         [Required]
@@ -38,7 +41,5 @@ namespace Crop_Deal.Models
 
         [JsonIgnore]
         public Crop_Details? Crop_Details { get; set; }
-
-
     }
 }
